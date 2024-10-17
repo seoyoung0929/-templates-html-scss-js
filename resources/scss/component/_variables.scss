@@ -128,6 +128,10 @@ $breakpoints: (
     'lg': $breakpoint-lg,
 ) !default;
 
+$grid: 1340px !default;
+$p-tablet: 30px !default;
+$p-mobile: 20px !default;
+
 //spacers
 $spacers: (
     '0': '0',
@@ -140,6 +144,7 @@ $spacers: (
 $font-family-base: 'Pretendard GOV', sans-serif !default;
 $font-size-root: 62.5% !default; //10px 1rem으로 설정
 //$font-size-base: 1rem !default;
+$font-size-base: 1.7rem !default;
 
 $font-size: (
     sizes: (
@@ -184,6 +189,12 @@ $font-size: (
         ),
     ),
 ) !default;
+
+$font-light: 300 !default;
+$font-normal: 400 !default;
+$font-medium: 500 !default;
+$font-bold: 700 !default;
+$font-bloder: 800 !default;
 
 $fws: (
     'light': 300,

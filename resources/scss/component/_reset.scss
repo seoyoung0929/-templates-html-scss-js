@@ -16,7 +16,7 @@ html {
     font-size: $font-size-root;
 }
 body {
-    font-size: var(--#{$prefix}fz-body-md);
+    font-size: $font-size-base; // 1.7rem = 17px
     overflow-x: hidden;
 }
 *:focus {
