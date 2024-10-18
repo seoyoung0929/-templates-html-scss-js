@@ -21,9 +21,18 @@
             rel="stylesheet"
             href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
         />
+        <link
+            rel="stylesheet"
+            as="style"
+            crossorigin
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        />
         <link rel="stylesheet" href="../resources/css/styles.css" />
         <!-- js -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script defer src="../resources/js/pattern/ui-swiper-script.js"></script>
+        <script defer src="../resources/js/pattern/ui-pattern-script.js"></script>
     </head>
     <body>
         <!-- 스킵 네비게이션 -->
@@ -91,7 +100,7 @@
                         </ul>
                     </nav>
                     <div class="util">
-                        <div class="lang active">
+                        <div class="lang">
                             <button class="lang__btn">kor</button>
                             <ul class="lang__lst">
                                 <li>kor</li>
@@ -106,7 +115,8 @@
                         </button>
                     </div>
                 </div>
-                <nav id="nav-all">
+                <!-- active 추가시 활성화 -->
+                <nav id="nav-all" class="">
                     <ul class="gnb__depth1">
                         <li>
                             <a href="#">
@@ -404,52 +414,5 @@
             </main>
             <footer id="footer">footer</footer>
         </div>
-
-        <script>
-            var swiper = new Swiper('.slide-intro', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                loop: true,
-                //autoplay: true,
-                pagination: {
-                    el: '.slide-intro .swiper-pagination',
-                    clickable: true,
-                },
-                // breakpoints: {
-                //     640: {
-                //         slidesPerView: 2,
-                //         spaceBetween: 20,
-                //     },
-                //     768: {
-                //         slidesPerView: 4,
-                //         spaceBetween: 40,
-                //     },
-                //     1024: {
-                //         slidesPerView: 5,
-                //         spaceBetween: 50,
-                //     },
-                // },
-            });
-        </script>
-        <script>
-            var swiper = new Swiper('.slide-studio', {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                pagination: {
-                    el: '.slide-studio .swiper-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    600: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                    },
-                },
-            });
-        </script>
     </body>
 </html>

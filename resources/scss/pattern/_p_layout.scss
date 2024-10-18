@@ -49,6 +49,7 @@
 
 // section layout
 .sec-g {
+    overflow: hidden;
     padding: 10vw 0;
 
     &__tit {
@@ -95,21 +96,26 @@
 
     &.active {
         &::before {
-            display: block;
+            //display: block;
+            height: 200px;
         }
         .gnb__depth2 {
-            display: block;
+            //display: block;
+            height: 200px;
+            padding: 20px 0;
         }
     }
     &::before {
-        display: none;
+        //display: none; - 이게 있으면 트렌지션이 안먹힘
         content: '';
         position: absolute;
         top: 102px;
         left: 0;
         right: 0;
-        height: 200px;
+        //height: 200px;
+        height: 0;
         background-color: $gray-5;
+        transition: all 0.3s;
     }
 
     .inner {
@@ -201,13 +207,16 @@
     }
 
     .gnb__depth2 {
-        display: none;
+        //display: none;
+        overflow: hidden;
         position: absolute;
         top: 102px;
         left: 0;
         right: 0;
-        padding: 20px 0;
+        height: 0;
+        //padding: 20px 0;
         background-color: $gray-5;
+        transition: all 0.3s;
 
         &::after {
             content: '';
@@ -246,6 +255,10 @@
             display: block;
         }
         &.active {
+            .lang__btn::after {
+                content: '\f106';
+                @include lineAwesome;
+            }
             .lang__lst {
                 display: block;
             }
@@ -298,23 +311,34 @@
 }
 
 #nav-all {
+    //display: none;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%;
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     padding: $p-mobile;
+    transition: all 0.5s;
 
-    &__close {
-        display: block;
+    &.active {
+        //display: block;
+        left: 0;
+    }
+
+    .nav-all__close {
+        //display: block;
         width: 50px;
         height: 50px;
         border-radius: 50%;
         background-color: $gray-90;
+
+        &::after {
+            content: '\f00d';
+            @include lineAwesome;
+            color: $white;
+        }
     }
 }
